@@ -22,9 +22,16 @@
 
 @implementation MapboxEvents
 
-- (id) init {
+- (id) initWithFlushAt:(NSInteger *)fAt flushAfter:(NSInteger *)fAfter api:(NSString *)mbApi token:(NSString *)mbToken {
     self = [super init];
     if (self) {
+        _queue = [[NSMutableArray alloc] init];
+        _flushAt = fAt ? fAt : (long *)20;
+        _flushAfter = fAfter ? fAfter : (long *)10000;
+        _api = mbApi ? mbApi : @"https://api.tiles.mapbox.com";
+        _token = mbToken ? mbToken : nil;
+        _instance = nil;
+        _anonid = nil;
     }
     return self;
 }
