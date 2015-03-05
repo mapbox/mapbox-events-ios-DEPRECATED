@@ -77,12 +77,23 @@
 
     // Send Array of Events to Server
     [self postEvents:events];
+
 }
 
-
 - (void) postEvents:(NSArray *)events {
+    // Setup URL Request
+    NSString *url = [NSString stringWithFormat:@"%@/events/v1?access_token=%@", _api, _token];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
 
-    
+    // Convert Array of Dictionaries to JSON
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:events options:NSJSONWritingPrettyPrinted error:nil];
+    [request setHTTPBody:jsonData];
+
+    // Send non blocking HTTP Request to server
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:nil];
+
 }
 
 
