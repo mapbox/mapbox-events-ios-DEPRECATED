@@ -37,4 +37,30 @@
     return self;
 }
 
+- (void) pushEvent:(NSString *)event withAttributes:(NSDictionary *)attributeDictionary {
+    
+    if (!event) {
+        return;
+    }
+    
+    NSMutableDictionary *evt = [[NSMutableDictionary alloc] init];
+    [evt setObject:event forKey:@"event"];
+    [evt setObject:[NSNumber numberWithInt:1] forKey:@"version"];
+    [evt setObject:[NSDate date] forKey:@"created"];
+    [evt setObject:self.instance forKey:@"instance"];
+    [evt setObject:self.anonid forKey:@"anonid"];
+    
+    for (NSString *key in [attributeDictionary allKeys]) {
+        [evt setObject:[attributeDictionary valueForKey:key] forKey:key];
+    }
+
+    // Make Immutable Version
+    NSDictionary *finalEvent = [NSDictionary dictionaryWithDictionary:evt];
+
+    // Put On The Queue
+    [self.queue addObject:finalEvent];
+    
+}
+
+
 @end
