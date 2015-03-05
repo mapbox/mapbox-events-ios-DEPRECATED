@@ -22,7 +22,7 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
-    _events = [[MapboxEvents alloc] initWithFlushAt:60000 flushAfter:50 api:nil token:@"pk.eyJ1IjoiYmxlZWdlIiwiYSI6IlhFcHdyMlEifQ.A8U0V-ob2G0RjI_gznrjtg"];
+    _events = [[MapboxEvents alloc] initWithFlushAt:1 flushAfter:50 api:nil token:@"pk.eyJ1IjoiYmxlZWdlIiwiYSI6IlhFcHdyMlEifQ.A8U0V-ob2G0RjI_gznrjtg"];
     
 }
 

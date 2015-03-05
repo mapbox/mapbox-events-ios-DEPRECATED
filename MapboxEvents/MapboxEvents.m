@@ -47,7 +47,7 @@
     NSMutableDictionary *evt = [[NSMutableDictionary alloc] init];
     [evt setObject:event forKey:@"event"];
     [evt setObject:[NSNumber numberWithInt:1] forKey:@"version"];
-    [evt setObject:[NSDate date] forKey:@"created"];
+    [evt setObject:[self formatDate:[NSDate date]] forKey:@"created"];
     [evt setObject:self.instance forKey:@"instance"];
     [evt setObject:self.anonid forKey:@"anonid"];
     
@@ -91,12 +91,13 @@
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
 
     // Convert Array of Dictionaries to JSON
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:events options:NSJSONWritingPrettyPrinted error:nil];
-    [request setHTTPBody:jsonData];
-
-    // Send non blocking HTTP Request to server
-    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:nil];
-
+    if ([NSJSONSerialization isValidJSONObject:events]) {
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:events options:NSJSONWritingPrettyPrinted error:nil];
+        [request setHTTPBody:jsonData];
+        
+        // Send non blocking HTTP Request to server
+        [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:nil];
+    }
 }
 
 - (void) startTimer {
@@ -110,6 +111,18 @@
     NSTimeInterval interval = (double)((NSInteger)_flushAfter);
     _timer = [NSTimer scheduledTimerWithTimeInterval:interval target:self selector:@selector(flush) userInfo:nil repeats:YES];
 }
+
+- (NSString *) formatDate:(NSDate *)date {
+    NSDateFormatter *rfc3339DateFormatter = [[NSDateFormatter alloc] init];
+    NSLocale *enUSPOSIXLocale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+    
+    [rfc3339DateFormatter setLocale:enUSPOSIXLocale];
+    [rfc3339DateFormatter setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"];
+    [rfc3339DateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+    
+    return [rfc3339DateFormatter stringFromDate:date];
+}
+
 
 
 @end
