@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2A5149C1AA8B2F600394ED2 /* MapboxEvents.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2A5149B1AA8B2F600394ED2 /* MapboxEvents.h */; };
+		A2A5149E1AA8B2F600394ED2 /* MapboxEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5149D1AA8B2F600394ED2 /* MapboxEvents.m */; };
+		A2A514A41AA8B2F600394ED2 /* libMapboxEvents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A514981AA8B2F600394ED2 /* libMapboxEvents.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A2A514A51AA8B2F600394ED2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2A514901AA8B2F600394ED2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2A514971AA8B2F600394ED2;
+			remoteInfo = MapboxEvents;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A2A514961AA8B2F600394ED2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				A2A5149C1AA8B2F600394ED2 /* MapboxEvents.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A2A514981AA8B2F600394ED2 /* libMapboxEvents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMapboxEvents.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2A5149B1AA8B2F600394ED2 /* MapboxEvents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapboxEvents.h; sourceTree = "<group>"; };
+		A2A5149D1AA8B2F600394ED2 /* MapboxEvents.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapboxEvents.m; sourceTree = "<group>"; };
+		A2A514A31AA8B2F600394ED2 /* MapboxEventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapboxEventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2A514A91AA8B2F600394ED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2A514951AA8B2F600394ED2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2A514A01AA8B2F600394ED2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2A514A41AA8B2F600394ED2 /* libMapboxEvents.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2A5148F1AA8B2F600394ED2 = {
+			isa = PBXGroup;
+			children = (
+				A2A5149A1AA8B2F600394ED2 /* MapboxEvents */,
+				A2A514A71AA8B2F600394ED2 /* MapboxEventsTests */,
+				A2A514991AA8B2F600394ED2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2A514991AA8B2F600394ED2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2A514981AA8B2F600394ED2 /* libMapboxEvents.a */,
+				A2A514A31AA8B2F600394ED2 /* MapboxEventsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2A5149A1AA8B2F600394ED2 /* MapboxEvents */ = {
+			isa = PBXGroup;
+			children = (
+				A2A5149B1AA8B2F600394ED2 /* MapboxEvents.h */,
+				A2A5149D1AA8B2F600394ED2 /* MapboxEvents.m */,
+			);
+			path = MapboxEvents;
+			sourceTree = "<group>";
+		};
+		A2A514A71AA8B2F600394ED2 /* MapboxEventsTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2A514A81AA8B2F600394ED2 /* Supporting Files */,
+			);
+			path = MapboxEventsTests;
+			sourceTree = "<group>";
+		};
+		A2A514A81AA8B2F600394ED2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2A514A91AA8B2F600394ED2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2A514971AA8B2F600394ED2 /* MapboxEvents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2A514AC1AA8B2F600394ED2 /* Build configuration list for PBXNativeTarget "MapboxEvents" */;
+			buildPhases = (
+				A2A514941AA8B2F600394ED2 /* Sources */,
+				A2A514951AA8B2F600394ED2 /* Frameworks */,
+				A2A514961AA8B2F600394ED2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MapboxEvents;
+			productName = MapboxEvents;
+			productReference = A2A514981AA8B2F600394ED2 /* libMapboxEvents.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A2A514A21AA8B2F600394ED2 /* MapboxEventsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2A514AF1AA8B2F600394ED2 /* Build configuration list for PBXNativeTarget "MapboxEventsTests" */;
+			buildPhases = (
+				A2A5149F1AA8B2F600394ED2 /* Sources */,
+				A2A514A01AA8B2F600394ED2 /* Frameworks */,
+				A2A514A11AA8B2F600394ED2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2A514A61AA8B2F600394ED2 /* PBXTargetDependency */,
+			);
+			name = MapboxEventsTests;
+			productName = MapboxEventsTests;
+			productReference = A2A514A31AA8B2F600394ED2 /* MapboxEventsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2A514901AA8B2F600394ED2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Mapbox;
+				TargetAttributes = {
+					A2A514971AA8B2F600394ED2 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					A2A514A21AA8B2F600394ED2 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = A2A514931AA8B2F600394ED2 /* Build configuration list for PBXProject "MapboxEvents" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A2A5148F1AA8B2F600394ED2;
+			productRefGroup = A2A514991AA8B2F600394ED2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2A514971AA8B2F600394ED2 /* MapboxEvents */,
+				A2A514A21AA8B2F600394ED2 /* MapboxEventsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2A514A11AA8B2F600394ED2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2A514941AA8B2F600394ED2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2A5149E1AA8B2F600394ED2 /* MapboxEvents.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2A5149F1AA8B2F600394ED2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2A514A61AA8B2F600394ED2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2A514971AA8B2F600394ED2 /* MapboxEvents */;
+			targetProxy = A2A514A51AA8B2F600394ED2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A2A514AA1AA8B2F600394ED2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A2A514AB1AA8B2F600394ED2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2A514AD1AA8B2F600394ED2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A2A514AE1AA8B2F600394ED2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A2A514B01AA8B2F600394ED2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MapboxEventsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A2A514B11AA8B2F600394ED2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MapboxEventsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2A514931AA8B2F600394ED2 /* Build configuration list for PBXProject "MapboxEvents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2A514AA1AA8B2F600394ED2 /* Debug */,
+				A2A514AB1AA8B2F600394ED2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2A514AC1AA8B2F600394ED2 /* Build configuration list for PBXNativeTarget "MapboxEvents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2A514AD1AA8B2F600394ED2 /* Debug */,
+				A2A514AE1AA8B2F600394ED2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A2A514AF1AA8B2F600394ED2 /* Build configuration list for PBXNativeTarget "MapboxEventsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2A514B01AA8B2F600394ED2 /* Debug */,
+				A2A514B11AA8B2F600394ED2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A2A514901AA8B2F600394ED2 /* Project object */;
+}
