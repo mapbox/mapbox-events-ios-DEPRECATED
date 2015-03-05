@@ -7,6 +7,7 @@
 //
 
 #import "MapboxEvents.h"
+@import AdSupport;
 
 @interface MapboxEvents()
 
@@ -30,8 +31,8 @@
         _flushAfter = fAfter ? fAfter : (long *)10000;
         _api = mbApi ? mbApi : @"https://api.tiles.mapbox.com";
         _token = mbToken ? mbToken : nil;
-        _instance = nil;
-        _anonid = nil;
+        _instance = [[NSUUID UUID] UUIDString];
+        _anonid = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
     }
     return self;
 }
