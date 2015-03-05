@@ -18,6 +18,7 @@
 @property (atomic) NSString *token;
 @property (atomic) NSString *instance;
 @property (atomic) NSString *anonid;
+@property (atomic) NSTimer *timer;
 
 @end
 
@@ -65,6 +66,8 @@
         [self flush];
     }
     
+    // Reset Timer (Initial Starting of Timer after first event is pushed)
+    [self startTimer];
 }
 
 - (void) flush {
@@ -94,6 +97,18 @@
     // Send non blocking HTTP Request to server
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:nil];
 
+}
+
+- (void) startTimer {
+    // Stop Timer if it already exists
+    if (_timer) {
+        [_timer invalidate];
+        _timer = nil;
+    }
+
+    // Start New Timer
+    NSTimeInterval interval = (double)((NSInteger)_flushAfter);
+    _timer = [NSTimer scheduledTimerWithTimeInterval:interval target:self selector:@selector(flush) userInfo:nil repeats:YES];
 }
 
 
