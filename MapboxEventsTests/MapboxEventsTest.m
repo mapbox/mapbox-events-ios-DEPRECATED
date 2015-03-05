@@ -31,8 +31,11 @@
     [super tearDown];
 }
 
-- (void)testExample {
+- (void)testEvents {
     XCTAssertNotNil(_events);
+    NSDictionary *atts = @{@"key1" : @"value1", @"key2" : @"value2"};
+    [_events pushEvent:@"TestEvent" withAttributes:atts];
+    
 }
 
 @end
