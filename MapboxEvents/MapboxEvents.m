@@ -60,6 +60,29 @@
     // Put On The Queue
     [self.queue addObject:finalEvent];
     
+    // Has Flush Limit Been Reached?
+    if ((int)_queue.count >= (int)_flushAt) {
+        [self flush];
+    }
+    
+}
+
+- (void) flush {
+    // Create Array of Events to push to the Server
+    NSRange theRange = NSMakeRange(0, (int)_flushAt);
+    NSArray *events = [_queue subarrayWithRange:theRange];
+    
+    // Update Queue to remove events sent to server
+    [_queue removeObjectsInRange:theRange];
+
+    // Send Array of Events to Server
+    [self postEvents:events];
+}
+
+
+- (void) postEvents:(NSArray *)events {
+
+    
 }
 
 
