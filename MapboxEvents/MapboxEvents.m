@@ -2,6 +2,9 @@
 //  MapboxEvents.m
 //  MapboxEvents
 //
+//  Dynamic detection of ASIdentifierManager from Mixpanel
+//  https://github.com/mixpanel/mixpanel-iphone/blob/master/LICENSE
+//
 //  Created by Brad Leege on 3/5/15.
 //  Copyright (c) 2015 Mapbox. All rights reserved.
 //
