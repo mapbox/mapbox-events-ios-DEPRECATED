@@ -10,7 +10,6 @@
 		A2A5149C1AA8B2F600394ED2 /* MapboxEvents.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2A5149B1AA8B2F600394ED2 /* MapboxEvents.h */; };
 		A2A5149E1AA8B2F600394ED2 /* MapboxEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5149D1AA8B2F600394ED2 /* MapboxEvents.m */; };
 		A2A514A41AA8B2F600394ED2 /* libMapboxEvents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A514981AA8B2F600394ED2 /* libMapboxEvents.a */; };
-		A2A514B71AA8CE0B00394ED2 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A514B61AA8CE0B00394ED2 /* AdSupport.framework */; };
 		A2A514B91AA8F10C00394ED2 /* MapboxEventsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A514B81AA8F10C00394ED2 /* MapboxEventsTest.m */; };
 		A2A7749A1AA91E3E00B29934 /* MapboxEventsNoAdFrameworkTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A774991AA91E3E00B29934 /* MapboxEventsNoAdFrameworkTest.m */; };
 /* End PBXBuildFile section */
@@ -54,7 +53,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2A514B71AA8CE0B00394ED2 /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +302,11 @@
 		A2A514AD1AA8B2F600394ED2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-weak_framework",
+					AdSupport,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -313,7 +315,11 @@
 		A2A514AE1AA8B2F600394ED2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-weak_framework",
+					AdSupport,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};

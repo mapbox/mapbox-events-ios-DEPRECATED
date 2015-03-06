@@ -34,8 +34,9 @@
         _api = mbApi ? mbApi : @"https://api.tiles.mapbox.com";
         _token = mbToken ? mbToken : nil;
         _instance = [[NSUUID UUID] UUIDString];
-        if (NSClassFromString(@"ASIdentifierManager")) {
-            _anonid = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+        Class asClass = NSClassFromString(@"ASIdentifierManager");
+        if (asClass != nil) {
+            _anonid = [[[asClass sharedManager] advertisingIdentifier] UUIDString];
         } else {
             _anonid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
         }
