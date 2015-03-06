@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "MapboxEvents.h"
-@import AdSupport;
+#import <UIKit/UIKit.h>
 
 @interface MapboxEventsTest : XCTestCase
 

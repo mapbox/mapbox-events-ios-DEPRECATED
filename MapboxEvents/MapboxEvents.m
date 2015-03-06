@@ -7,8 +7,8 @@
 //
 
 #import "MapboxEvents.h"
-@import AdSupport;
-@import UIKit;
+#import <AdSupport/AdSupport.h>
+#import <UIKit/UIKit.h>
 
 @interface MapboxEvents()
 
@@ -35,10 +35,10 @@
         _token = mbToken ? mbToken : nil;
         _instance = [[NSUUID UUID] UUIDString];
         Class asClass = NSClassFromString(@"ASIdentifierManager");
-        if (asClass != nil) {
-            _anonid = [[[asClass sharedManager] advertisingIdentifier] UUIDString];
-        } else {
+        if (!asClass) {
             _anonid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+        } else {
+            _anonid = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
         }
     }
     return self;
