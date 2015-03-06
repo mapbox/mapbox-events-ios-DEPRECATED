@@ -11,7 +11,6 @@
 		A2A5149E1AA8B2F600394ED2 /* MapboxEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5149D1AA8B2F600394ED2 /* MapboxEvents.m */; };
 		A2A514A41AA8B2F600394ED2 /* libMapboxEvents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A514981AA8B2F600394ED2 /* libMapboxEvents.a */; };
 		A2A514B91AA8F10C00394ED2 /* MapboxEventsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A514B81AA8F10C00394ED2 /* MapboxEventsTest.m */; };
-		A2A7749A1AA91E3E00B29934 /* MapboxEventsNoAdFrameworkTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A774991AA91E3E00B29934 /* MapboxEventsNoAdFrameworkTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +44,6 @@
 		A2A514A91AA8B2F600394ED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2A514B61AA8CE0B00394ED2 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		A2A514B81AA8F10C00394ED2 /* MapboxEventsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapboxEventsTest.m; sourceTree = "<group>"; };
-		A2A774991AA91E3E00B29934 /* MapboxEventsNoAdFrameworkTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapboxEventsNoAdFrameworkTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				A2A514B81AA8F10C00394ED2 /* MapboxEventsTest.m */,
-				A2A774991AA91E3E00B29934 /* MapboxEventsNoAdFrameworkTest.m */,
 				A2A514A81AA8B2F600394ED2 /* Supporting Files */,
 			);
 			path = MapboxEventsTests;
@@ -209,7 +206,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2A7749A1AA91E3E00B29934 /* MapboxEventsNoAdFrameworkTest.m in Sources */,
 				A2A514B91AA8F10C00394ED2 /* MapboxEventsTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
