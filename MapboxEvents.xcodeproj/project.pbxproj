@@ -298,11 +298,7 @@
 		A2A514AD1AA8B2F600394ED2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-weak_framework",
-					AdSupport,
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -311,11 +307,7 @@
 		A2A514AE1AA8B2F600394ED2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-weak_framework",
-					AdSupport,
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -338,8 +330,6 @@
 					"$(inherited)",
 					"-framework",
 					XCTest,
-					"-weak_framework",
-					AdSupport,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,8 +348,6 @@
 					"$(inherited)",
 					"-framework",
 					XCTest,
-					"-weak_framework",
-					AdSupport,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
