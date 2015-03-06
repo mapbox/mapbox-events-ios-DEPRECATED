@@ -8,6 +8,7 @@
 
 #import "MapboxEvents.h"
 @import AdSupport;
+@import UIKit;
 
 @interface MapboxEvents()
 
@@ -33,7 +34,11 @@
         _api = mbApi ? mbApi : @"https://api.tiles.mapbox.com";
         _token = mbToken ? mbToken : nil;
         _instance = [[NSUUID UUID] UUIDString];
-        _anonid = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+        if (NSClassFromString(@"ASIdentifierManager")) {
+            _anonid = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+        } else {
+            _anonid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+        }
     }
     return self;
 }
