@@ -40,9 +40,16 @@
         if (ASIdentifierManagerClass) {
             SEL sharedManagerSelector = NSSelectorFromString(@"sharedManager");
             id sharedManager = ((id (*)(id, SEL))[ASIdentifierManagerClass methodForSelector:sharedManagerSelector])(ASIdentifierManagerClass, sharedManagerSelector);
-            SEL advertisingIdentifierSelector = NSSelectorFromString(@"advertisingIdentifier");
-            NSUUID *uuid = ((NSUUID* (*)(id, SEL))[sharedManager methodForSelector:advertisingIdentifierSelector])(sharedManager, advertisingIdentifierSelector);
-            _anonid = [uuid UUIDString];
+            // Add check here
+            SEL isAdvertisingTrackingEnabledSelector = NSSelectorFromString(@"isAdvertisingTrackingEnabled");
+            BOOL trackingEnabled = ((BOOL (*)(id, SEL))[sharedManager methodForSelector:isAdvertisingTrackingEnabledSelector])(sharedManager, isAdvertisingTrackingEnabledSelector);
+            if (trackingEnabled) {
+                SEL advertisingIdentifierSelector = NSSelectorFromString(@"advertisingIdentifier");
+                NSUUID *uuid = ((NSUUID* (*)(id, SEL))[sharedManager methodForSelector:advertisingIdentifierSelector])(sharedManager, advertisingIdentifierSelector);
+                _anonid = [uuid UUIDString];
+            } else {
+                _anonid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+            }
         } else {
             _anonid = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
         }
