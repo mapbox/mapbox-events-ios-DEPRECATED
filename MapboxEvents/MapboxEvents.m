@@ -106,8 +106,9 @@
     // Setup URL Request
     NSString *url = [NSString stringWithFormat:@"%@/events/v1?access_token=%@", _api, _token];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
-    [request setHTTPMethod:@"POST"];
+    [request setValue:@"MapboxEventsiOS" forHTTPHeaderField:@"User-Agent"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPMethod:@"POST"];
 
     // Convert Array of Dictionaries to JSON
     if ([NSJSONSerialization isValidJSONObject:events]) {

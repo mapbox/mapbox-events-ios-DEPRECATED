@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A292BF151AAA0A8600DAB729 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A514B61AA8CE0B00394ED2 /* AdSupport.framework */; };
+		A20271441AB38BB3000F65DE /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A514B61AA8CE0B00394ED2 /* AdSupport.framework */; };
 		A2A5149C1AA8B2F600394ED2 /* MapboxEvents.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2A5149B1AA8B2F600394ED2 /* MapboxEvents.h */; };
 		A2A5149E1AA8B2F600394ED2 /* MapboxEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5149D1AA8B2F600394ED2 /* MapboxEvents.m */; };
 		A2A514A41AA8B2F600394ED2 /* libMapboxEvents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A514981AA8B2F600394ED2 /* libMapboxEvents.a */; };
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A292BF151AAA0A8600DAB729 /* AdSupport.framework in Frameworks */,
+				A20271441AB38BB3000F65DE /* AdSupport.framework in Frameworks */,
 				A2A514A41AA8B2F600394ED2 /* libMapboxEvents.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
