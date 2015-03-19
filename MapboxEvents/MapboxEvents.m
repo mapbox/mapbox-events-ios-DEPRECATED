@@ -179,20 +179,7 @@ NSString *userAgent;
         [request setHTTPBody:jsonData];
         
         // Send non blocking HTTP Request to server
-        [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-            NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
-            NSLog(@"MapboxEvents: response status code: %ld", (long)[httpResponse statusCode]);
-            // Our completion block code goes here
-            if (error) {
-                NSLog(@"Error in updateInfoFromServer: %@ %@", error, [error localizedDescription]);
-            } else if (!response) {
-                NSLog(@"Could not reach server!");
-            } else if (!data) {
-                NSLog(@"Server did not return any data!");
-            } else {
-                NSLog(@"happiness");
-            }
-        }];
+        [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:nil];
     }
 }
 
