@@ -143,6 +143,11 @@ NSString *userAgent;
 }
 
 - (void) flush {
+    if (_token == nil) {
+        NSLog(@"token hasn't been set yet, so no events can be sent. return");
+        return;
+    }
+    
     if (_flushAt > [_queue count]) {
         NSLog(@"flush() flushAt (%lu) is greater than current queue count (%lu) so just return", _flushAt, [_queue count]);
         return;
