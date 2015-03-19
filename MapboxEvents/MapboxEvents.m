@@ -21,6 +21,7 @@
 @property (atomic) NSString *instance;
 @property (atomic) NSString *anonid;
 @property (atomic) NSTimer *timer;
+@property (atomic) NSString *userAgent;
 
 @end
 
@@ -34,7 +35,6 @@ NSString *model;
 NSString *iOSVersion;
 NSString *carrier;
 NSNumber *scale;
-NSString *userAgent;
 
 - (id) init {
     self = [super init];
@@ -76,10 +76,7 @@ NSString *userAgent;
         CTCarrier *carrierVendor = [[[CTTelephonyNetworkInfo alloc] init] subscriberCellularProvider];
         carrier = [carrierVendor carrierName];
         
-        NSString *appName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"];
-        NSString *appVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
-        
-        userAgent = [NSString stringWithFormat:@"%@/%@ HermesEvents/1.0", appName, appVersion];
+        _userAgent = @"MapboxEventsiOS/1.0";
         
         // Setup Date Format
         rfc3339DateFormatter = [[NSDateFormatter alloc] init];
@@ -169,7 +166,7 @@ NSString *userAgent;
     // Setup URL Request
     NSString *url = [NSString stringWithFormat:@"%@/events/v1?access_token=%@", _api, _token];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
-    [request setValue:userAgent forHTTPHeaderField:@"User-Agent"];
+    [request setValue:[self getUserAgent] forHTTPHeaderField:@"User-Agent"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPMethod:@"POST"];
     
@@ -193,6 +190,14 @@ NSString *userAgent;
     // Start New Timer
     NSTimeInterval interval = (double)((NSInteger)_flushAfter);
     _timer = [NSTimer scheduledTimerWithTimeInterval:interval target:self selector:@selector(flush) userInfo:nil repeats:YES];
+}
+
+- (NSString *) getUserAgent {
+    
+    if (_appName != nil && _appVersion != nil) {
+        return [NSString stringWithFormat:@"%@/%@ %@", _appName, _appVersion, _userAgent];
+    }
+    return _userAgent;
 }
 
 - (NSString *) formatDate:(NSDate *)date {

@@ -14,6 +14,8 @@
 @property (atomic) NSInteger flushAfter;
 @property (atomic) NSString *api;
 @property (atomic) NSString *token;
+@property (atomic) NSString *appName;
+@property (atomic) NSString *appVersion;
 
 + (id)sharedManager;
 

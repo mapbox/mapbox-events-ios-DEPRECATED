@@ -24,6 +24,8 @@
     events.flushAt = 1;
     events.flushAfter = 50;
     events.token = @"pk.eyJ1IjoiYmxlZWdlIiwiYSI6IlhFcHdyMlEifQ.A8U0V-ob2G0RjI_gznrjtg";
+    events.appName = @"TestApp";
+    events.appVersion = @"1.2.3";
 }
 
 - (void)tearDown {
@@ -36,6 +38,8 @@
     XCTAssertEqual([[MapboxEvents sharedManager] flushAt], 1);
     XCTAssertEqual([[MapboxEvents sharedManager] flushAfter], 50);
     XCTAssertEqual([[MapboxEvents sharedManager] token], @"pk.eyJ1IjoiYmxlZWdlIiwiYSI6IlhFcHdyMlEifQ.A8U0V-ob2G0RjI_gznrjtg");
+    XCTAssertEqual([[MapboxEvents sharedManager] appName], @"TestApp");
+    XCTAssertEqual([[MapboxEvents sharedManager] appVersion], @"1.2.3");
     
 //    [[MapboxEvents sharedManager] pushEvent:@"TestEvent" withAttributes:nil];
 }
