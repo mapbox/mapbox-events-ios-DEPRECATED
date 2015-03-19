@@ -1,4 +1,4 @@
 language: objective-c
 
 xcode_project: MapboxEvents.xcodeproj
-
+scheme: MapboxEventsTests
