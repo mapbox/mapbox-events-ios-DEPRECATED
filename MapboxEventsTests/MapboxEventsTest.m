@@ -36,6 +36,8 @@
     XCTAssertEqual([[MapboxEvents sharedManager] flushAt], 1);
     XCTAssertEqual([[MapboxEvents sharedManager] flushAfter], 50);
     XCTAssertEqual([[MapboxEvents sharedManager] token], @"pk.eyJ1IjoiYmxlZWdlIiwiYSI6IlhFcHdyMlEifQ.A8U0V-ob2G0RjI_gznrjtg");
+    
+//    [[MapboxEvents sharedManager] pushEvent:@"TestEvent" withAttributes:nil];
 }
 
 @end
