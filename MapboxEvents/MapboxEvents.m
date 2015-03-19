@@ -194,8 +194,8 @@ NSNumber *scale;
 
 - (NSString *) getUserAgent {
     
-    if (_appName != nil && _appVersion != nil) {
-        return [NSString stringWithFormat:@"%@/%@ %@", _appName, _appVersion, _userAgent];
+    if (_appName != nil && _appVersion != nil && ([_userAgent rangeOfString:_appName].location == NSNotFound)) {
+        _userAgent = [NSString stringWithFormat:@"%@/%@ %@", _appName, _appVersion, _userAgent];
     }
     return _userAgent;
 }
