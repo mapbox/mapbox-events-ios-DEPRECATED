@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A20271441AB38BB3000F65DE /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A514B61AA8CE0B00394ED2 /* AdSupport.framework */; };
+		A285C89A1ABB55E000025971 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A285C8991ABB55E000025971 /* CoreTelephony.framework */; };
+		A285C89B1ABB566E00025971 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A285C8991ABB55E000025971 /* CoreTelephony.framework */; };
 		A2A5149C1AA8B2F600394ED2 /* MapboxEvents.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2A5149B1AA8B2F600394ED2 /* MapboxEvents.h */; };
 		A2A5149E1AA8B2F600394ED2 /* MapboxEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A5149D1AA8B2F600394ED2 /* MapboxEvents.m */; };
 		A2A514A41AA8B2F600394ED2 /* libMapboxEvents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A514981AA8B2F600394ED2 /* libMapboxEvents.a */; };
@@ -38,6 +40,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A285C8991ABB55E000025971 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		A2A514981AA8B2F600394ED2 /* libMapboxEvents.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMapboxEvents.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A5149B1AA8B2F600394ED2 /* MapboxEvents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapboxEvents.h; sourceTree = "<group>"; };
 		A2A5149D1AA8B2F600394ED2 /* MapboxEvents.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapboxEvents.m; sourceTree = "<group>"; };
@@ -52,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A285C89A1ABB55E000025971 /* CoreTelephony.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A285C89B1ABB566E00025971 /* CoreTelephony.framework in Frameworks */,
 				A20271441AB38BB3000F65DE /* AdSupport.framework in Frameworks */,
 				A2A514A41AA8B2F600394ED2 /* libMapboxEvents.a in Frameworks */,
 			);
@@ -70,6 +75,7 @@
 		A2A5148F1AA8B2F600394ED2 = {
 			isa = PBXGroup;
 			children = (
+				A285C8991ABB55E000025971 /* CoreTelephony.framework */,
 				A2A514B61AA8CE0B00394ED2 /* AdSupport.framework */,
 				A2A5149A1AA8B2F600394ED2 /* MapboxEvents */,
 				A2A514A71AA8B2F600394ED2 /* MapboxEventsTests */,

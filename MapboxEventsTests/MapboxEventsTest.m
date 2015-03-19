@@ -13,8 +13,6 @@
 
 @interface MapboxEventsTest : XCTestCase
 
-@property (atomic) MapboxEvents *events;
-
 @end
 
 @implementation MapboxEventsTest
@@ -22,8 +20,10 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
-    _events = [[MapboxEvents alloc] initWithFlushAt:1 flushAfter:50 api:nil token:@"pk.eyJ1IjoiYmxlZWdlIiwiYSI6IlhFcHdyMlEifQ.A8U0V-ob2G0RjI_gznrjtg"];
-    
+    MapboxEvents *events = [MapboxEvents sharedManager];
+    events.flushAt = 1;
+    events.flushAfter = 50;
+    events.token = @"pk.eyJ1IjoiYmxlZWdlIiwiYSI6IlhFcHdyMlEifQ.A8U0V-ob2G0RjI_gznrjtg";
 }
 
 - (void)tearDown {
@@ -32,10 +32,10 @@
 }
 
 - (void)testEvents {
-    XCTAssertNotNil(_events);
-    NSDictionary *atts = @{@"key1" : @"value1", @"key2" : @"value2"};
-    [_events pushEvent:@"TestEvent" withAttributes:atts];
-    
+    XCTAssertNotNil([MapboxEvents sharedManager]);
+    XCTAssertEqual([[MapboxEvents sharedManager] flushAt], 1);
+    XCTAssertEqual([[MapboxEvents sharedManager] flushAfter], 50);
+    XCTAssertEqual([[MapboxEvents sharedManager] token], @"pk.eyJ1IjoiYmxlZWdlIiwiYSI6IlhFcHdyMlEifQ.A8U0V-ob2G0RjI_gznrjtg");
 }
 
 @end

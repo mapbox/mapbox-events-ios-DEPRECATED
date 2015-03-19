@@ -10,7 +10,12 @@
 
 @interface MapboxEvents : NSObject
 
-- (id) initWithFlushAt:(NSInteger)fAt flushAfter:(NSInteger)fAfter api:(NSString *)mbApi token:(NSString *)mbToken;
+@property (atomic) NSInteger flushAt;
+@property (atomic) NSInteger flushAfter;
+@property (atomic) NSString *api;
+@property (atomic) NSString *token;
+
++ (id)sharedManager;
 
 - (void) pushEvent:(NSString *)event withAttributes:(NSDictionary *)attributeDictionary;
 
