@@ -9,7 +9,12 @@ Port of [Mapbox Events Javascript Library](https://github.com/mapbox/mapbox-even
 
 ```objective-c
 
-MapboxEvents *events = [[MapboxEvents alloc] initWithFlushAt:20 flushAfter:10000 api:nil token:@"Your Mapbox API Token"];
+MapboxEvents *events = [MapboxEvents sharedManager];
+events.flushAt = 20;
+events.flushAfter = 10000;
+events.token = @"Your Mapbox API Token";
+events.appName = @"Your App Name";
+events.appVersion = @"x.y.z";
 
 NSDictionary *atts = @{@"attribute1" : @"foo", @"attribute2" : @"bar"};
 [events pushEvent:@"foo" withAttributes:atts];
